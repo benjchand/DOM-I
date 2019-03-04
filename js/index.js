@@ -53,7 +53,7 @@ let codeSnippet = document.getElementById("cta-img");
 codeSnippet.setAttribute('src', 'img/header-img.png');
 
 let ctaText = document.querySelector('h1');
-ctaText.textContent = ('DOM \n Is \n Awesome');
+ctaText.textContent = "DOM \n Is \n Awesome";
 
 let buttonText = document.querySelector('button');
 buttonText.textContent = 'Get Started';
@@ -64,5 +64,32 @@ let h4Headers = document.querySelectorAll('h4');
 h4Headers.forEach(function(currentValue, index){
     currentValue.textContent = h4ItemsList[index];
 });
+
+const paragraphContent = document.querySelectorAll('p');
+paragraphContent[0].textContent = "Features content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.";
+paragraphContent[1].textContent = "About content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.";
+
+let middleImg = document.getElementById("middle-img");
+middleImg.setAttribute('src', 'img/mid-page-accent.jpg');
+middleImg.setAttribute('src', 'img/mid-page-accent.jpg');
+
+
+paragraphContent[2].textContent = "Services content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.";
+paragraphContent[3].textContent = "Product content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.";
+paragraphContent[4].textContent = "Vision content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.";
+
+paragraphContent[5].textContent = "123 Way 456 Street Somewhere, USA";
+
+paragraphContent[6].textContent = "1 (888) 888-8888";
+
+paragraphContent[7].textContent = "sales@greatidea.io";
+
+paragraphContent[8].textContent = "Copyright Great Idea! 2018"
+
+
+
+
+
+
 
 
