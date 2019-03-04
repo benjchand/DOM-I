@@ -46,14 +46,27 @@ const navItemsList = ['Services', 'Product', 'Vision', 'Features', 'About', 'Con
 let navAnchors = document.querySelectorAll('a');
 navAnchors.forEach(function(currentValue, index){
     currentValue.textContent = navItemsList[index];
+    currentValue.style.color = 'green';
 });
+
+const newNavAnchor = document.createElement('a');
+newNavAnchor.textContent = 'New Link';
+newNavAnchor.style.color = 'blue';
+document.querySelector('nav').appendChild(newNavAnchor);
+
+const newestNavAnchor = document.createElement('a');
+newestNavAnchor.textContent = 'Newest Link';
+newestNavAnchor.style.color = 'red';
+document.querySelector('nav').prepend(newestNavAnchor);
+
+
 
 
 let codeSnippet = document.getElementById("cta-img");
 codeSnippet.setAttribute('src', 'img/header-img.png');
 
-let ctaText = document.querySelector('h1');
-ctaText.textContent = "DOM \n Is \n Awesome";
+let ctaText = document.querySelector('h1'); 
+ctaText.innerHTML = "DOM <br> Is <br> Awesome";
 
 let buttonText = document.querySelector('button');
 buttonText.textContent = 'Get Started';
@@ -78,7 +91,7 @@ paragraphContent[2].textContent = "Services content elementum magna eros, ac pos
 paragraphContent[3].textContent = "Product content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.";
 paragraphContent[4].textContent = "Vision content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.";
 
-paragraphContent[5].textContent = "123 Way 456 Street Somewhere, USA";
+paragraphContent[5].innerHTML = "123 Way 456 Street <br> Somewhere, USA";
 
 paragraphContent[6].textContent = "1 (888) 888-8888";
 
