@@ -39,4 +39,70 @@ const siteContent = {
 
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
-logo.setAttribute('src', siteContent["nav"]["img-src"])
+logo.setAttribute('src', siteContent["nav"]["img-src"]);
+
+
+const navItemsList = ['Services', 'Product', 'Vision', 'Features', 'About', 'Contact']
+let navAnchors = document.querySelectorAll('a');
+navAnchors.forEach(function(currentValue, index){
+    currentValue.textContent = navItemsList[index];
+    currentValue.style.color = 'green';
+});
+
+const newNavAnchor = document.createElement('a');
+newNavAnchor.textContent = 'New Link';
+newNavAnchor.style.color = 'blue';
+document.querySelector('nav').appendChild(newNavAnchor);
+
+const newestNavAnchor = document.createElement('a');
+newestNavAnchor.textContent = 'Newest Link';
+newestNavAnchor.style.color = 'red';
+document.querySelector('nav').prepend(newestNavAnchor);
+
+
+
+
+let codeSnippet = document.getElementById("cta-img");
+codeSnippet.setAttribute('src', 'img/header-img.png');
+
+let ctaText = document.querySelector('h1'); 
+ctaText.innerHTML = "DOM <br> Is <br> Awesome";
+
+let buttonText = document.querySelector('button');
+buttonText.textContent = 'Get Started';
+
+
+const h4ItemsList = ['Features', 'About', 'Services', 'Product', 'Vision', 'Contact']
+let h4Headers = document.querySelectorAll('h4');
+h4Headers.forEach(function(currentValue, index){
+    currentValue.textContent = h4ItemsList[index];
+});
+
+const paragraphContent = document.querySelectorAll('p');
+paragraphContent[0].textContent = "Features content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.";
+paragraphContent[1].textContent = "About content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.";
+
+let middleImg = document.getElementById("middle-img");
+middleImg.setAttribute('src', 'img/mid-page-accent.jpg');
+middleImg.setAttribute('src', 'img/mid-page-accent.jpg');
+
+
+paragraphContent[2].textContent = "Services content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.";
+paragraphContent[3].textContent = "Product content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.";
+paragraphContent[4].textContent = "Vision content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.";
+
+paragraphContent[5].innerHTML = "123 Way 456 Street <br> Somewhere, USA";
+
+paragraphContent[6].textContent = "1 (888) 888-8888";
+
+paragraphContent[7].textContent = "sales@greatidea.io";
+
+paragraphContent[8].textContent = "Copyright Great Idea! 2018"
+
+
+
+
+
+
+
+
