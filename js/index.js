@@ -14,26 +14,26 @@ const siteContent = {
     "img-src": "img/header-img.png"
   },
   "main-content": {
-    "features-h4":"Features",
+    "features-h4": "Features",
     "features-content": "Features content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.",
-    "about-h4":"About",
+    "about-h4": "About",
     "about-content": "About content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.",
     "middle-img-src": "img/mid-page-accent.jpg",
-    "services-h4":"Services",
+    "services-h4": "Services",
     "services-content": "Services content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.",
-    "product-h4":"Product",
+    "product-h4": "Product",
     "product-content": "Product content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.",
-    "vision-h4":"Vision",
+    "vision-h4": "Vision",
     "vision-content": "Vision content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.",
   },
   "contact": {
-    "contact-h4" : "Contact",
-    "address" : "123 Way 456 Street Somewhere, USA",
-    "phone" : "1 (888) 888-8888",
-    "email" : "sales@greatidea.io",
+    "contact-h4": "Contact",
+    "address": "123 Way 456 Street Somewhere, USA",
+    "phone": "1 (888) 888-8888",
+    "email": "sales@greatidea.io",
   },
   "footer": {
-    "copyright" : "Copyright Great Idea! 2018"
+    "copyright": "Copyright Great Idea! 2018"
   },
 };
 
@@ -42,40 +42,36 @@ let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"]);
 
 
-const navItemsList = ['Services', 'Product', 'Vision', 'Features', 'About', 'Contact']
-let navAnchors = document.querySelectorAll('a');
-navAnchors.forEach(function(currentValue, index){
-    currentValue.textContent = navItemsList[index];
-    currentValue.style.color = 'green';
-});
+const navText = [`Services`, `Products`, `Vision`, `Features`, `About`, `Contact`]
+const navAnchors = document.querySelectorAll(`a`);
+navAnchors.forEach((element, index) => {
+  element.textContent = navText[index]
+})
 
-const newNavAnchor = document.createElement('a');
-newNavAnchor.textContent = 'New Link';
-newNavAnchor.style.color = 'blue';
-document.querySelector('nav').appendChild(newNavAnchor);
+const newNavLink = document.createElement(`a`);
+newNavLink.textContent = `New Link`;
+newNavLink.style.color = 'blue'
+document.querySelector(`nav`).append(newNavLink)
 
 const newestNavAnchor = document.createElement('a');
 newestNavAnchor.textContent = 'Newest Link';
 newestNavAnchor.style.color = 'red';
 document.querySelector('nav').prepend(newestNavAnchor);
 
-
-
-
-let codeSnippet = document.getElementById("cta-img");
-codeSnippet.setAttribute('src', 'img/header-img.png');
-
-let ctaText = document.querySelector('h1'); 
+let ctaText = document.querySelector('h1');
 ctaText.innerHTML = "DOM <br> Is <br> Awesome";
 
 let buttonText = document.querySelector('button');
 buttonText.textContent = 'Get Started';
 
+const ctaImage = document.getElementById(`cta-img`)
+ctaImage.setAttribute(`src`, `img/header-img.png`)
 
-const h4ItemsList = ['Features', 'About', 'Services', 'Product', 'Vision', 'Contact']
-let h4Headers = document.querySelectorAll('h4');
-h4Headers.forEach(function(currentValue, index){
-    currentValue.textContent = h4ItemsList[index];
+const mainContentHeaderList = ['Features', 'About', 'Services', 'Product', 'Vision'];
+const mainContentHeaders = document.querySelectorAll(`h4`);
+mainContentHeaders.forEach((element, index) => {
+  element.textContent = mainContentHeaderList[index]
+  element.style.padding = `30px, 0`
 });
 
 const paragraphContent = document.querySelectorAll('p');
